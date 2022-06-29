@@ -1,7 +1,5 @@
-:root {
-    --fc-light: rgb(247, 247, 247);
-    --fc-dark: rgb(32, 32, 32);
-}
+$fc-light: rgb(247, 247, 247);
+$fc-dark: rgb(32, 32, 32);
 
 *,
 *::before,
@@ -36,29 +34,37 @@ body {
 }
 
 .logo-container {
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    padding-block: 1em;
     margin-top: auto;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .logo {
+        display: block;
+        width: clamp(200px, 20vw, 40%);
+    }
 }
 
 .credits-container {
     margin-top: auto;
 
-    & p {
+    p {
         padding-bottom: 1em;
-        color: var(--fc-light);
+        color: $fc-light;
     }
 
-    & a {
-        color: var(--fc-light);
+    a {
+        color: $fc-light;
     }
 
-    & a:visited {
-        color: var(--fc-light);
+    a:visited {
+        color: $fc-light;
     }
 
-    & a:hover {
+    a:hover {
         text-decoration: none;
     }
 }
