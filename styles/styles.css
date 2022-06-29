@@ -1,3 +1,8 @@
+:root {
+  --fc-light: rgb(247, 247, 247);
+  --fc-dark: rgb(32, 32, 32);
+}
+
 *,
 *::before,
 *::after {
@@ -5,6 +10,58 @@
   margin: 0;
   font-size: inherit;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Landing page left side */
+.landing-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+  background-color: red;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo-container {
+  height: 100px;
+  width: 100%;
+  margin-top: auto;
+  background-color: black;
+}
+
+.credits-container {
+  margin-top: auto;
+}
+.credits-container p {
+  padding-bottom: 1em;
+  color: var(--fc-light);
+}
+.credits-container a {
+  color: var(--fc-light);
+}
+.credits-container a:visited {
+  color: var(--fc-light);
+}
+.credits-container a:hover {
+  text-decoration: none;
+}
+
+/* Landing page right side */
+.landing-right {
+  flex: 2 1 0;
+  background-color: blue;
 }
 
 /*# sourceMappingURL=styles.css.map */
