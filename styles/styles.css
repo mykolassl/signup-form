@@ -3,7 +3,6 @@
 *::after {
   padding: 0;
   margin: 0;
-  font-size: inherit;
   box-sizing: border-box;
 }
 
@@ -16,6 +15,11 @@ body {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+}
 /* Landing page left side */
 .landing-left {
   display: flex;
@@ -23,6 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   flex: 1 1 0;
+  padding-block: 2em;
   background-color: red;
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
@@ -47,14 +52,14 @@ body {
   margin-top: auto;
 }
 .credits-container p {
-  padding-bottom: 1em;
-  color: rgb(247, 247, 247);
+  padding-top: 2em;
+  color: hsl(0deg, 0%, 90%);
 }
 .credits-container a {
-  color: rgb(247, 247, 247);
+  color: hsl(0deg, 0%, 90%);
 }
 .credits-container a:visited {
-  color: rgb(247, 247, 247);
+  color: hsl(0deg, 0%, 90%);
 }
 .credits-container a:hover {
   text-decoration: none;
@@ -62,8 +67,82 @@ body {
 
 /* Landing page right side */
 .landing-right {
-  flex: 2 1 0;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 0;
+  background-color: hsl(0deg, 0%, 90%);
+}
+.landing-right > p {
+  margin-left: 2em;
+  margin-bottom: 2em;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 10%);
+}
+.landing-right > p a {
+  color: #596D48;
+  text-decoration: none;
+}
+.landing-right > p a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 2em;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.container h2 {
+  color: hsl(0deg, 0%, 10%);
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em 4em;
+  margin-top: 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 20rem;
+}
+.input-container > * {
+  width: 100%;
+}
+.input-container label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: hsl(0deg, 0%, 10%);
+}
+.input-container input {
+  padding: 0.5em;
+  border: 1px solid hsl(0deg, 0%, 90%);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.input-container input:focus, .input-container input:hover {
+  outline: none;
+  border-color: blue;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+form > button[type=submit] {
+  padding: 1em 3em;
+  margin: 2em;
+  background-color: #596D48;
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(0deg, 0%, 90%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+form > button[type=submit]:hover {
+  background-color: rgba(89, 109, 72, 0.8862745098);
 }
 
 /*# sourceMappingURL=styles.css.map */

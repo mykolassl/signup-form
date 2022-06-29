@@ -1,12 +1,21 @@
-$fc-light: rgb(247, 247, 247);
-$fc-dark: rgb(32, 32, 32);
+$clr-light-100: hsl(0, 0%, 100%);
+$clr-light-90: hsl(0, 0%, 90%);
+$clr-light-80: hsl(0, 0%, 80%);
+$clr-light-70: hsl(0, 0%, 70%);
+$clr-light-60: hsl(0, 0%, 60%);
+$clr-light-50: hsl(0, 0%, 50%);
+$clr-light-40: hsl(0, 0%, 40%);
+$clr-light-30: hsl(0, 0%, 30%);
+$clr-light-20: hsl(0, 0%, 20%);
+$clr-light-10: hsl(0, 0%, 10%);
+$clr-light-0: hsl(0, 0%, 0%);
+$clr-green: #596D48;
 
 *,
 *::before,
 *::after {
     padding: 0;
     margin: 0;
-    font-size: inherit;
     box-sizing: border-box;
 }
 
@@ -19,6 +28,12 @@ body {
     min-height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }    
+}
+
 /* Landing page left side */
 
 .landing-left {
@@ -27,6 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1 1 0;
+    padding-block: 2em;
     background-color: red;
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
@@ -52,16 +68,16 @@ body {
     margin-top: auto;
 
     p {
-        padding-bottom: 1em;
-        color: $fc-light;
+        padding-top: 2em;
+        color: $clr-light-90;
     }
 
     a {
-        color: $fc-light;
+        color: $clr-light-90;
     }
 
     a:visited {
-        color: $fc-light;
+        color: $clr-light-90;
     }
 
     a:hover {
@@ -72,6 +88,90 @@ body {
 /* Landing page right side */
 
 .landing-right {
-    flex: 2 1 0;
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 0;
+    background-color: $clr-light-90;
+
+    & > p {
+        margin-left: 2em;
+        margin-bottom: 2em;
+        font-weight: 500;
+        color: $clr-light-10;
+
+        a {
+            color: $clr-green;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.container {
+    padding: 2em;
+    background-color: $clr-light-100;
+
+    h2 {
+        color: $clr-light-10;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em 4em;
+    margin-top: 2rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 20rem;
+
+    > * {
+        width: 100%;
+    }
+
+    label {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: $clr-light-10;
+    }
+
+    input {
+        padding: 0.5em;
+        border: 1px solid $clr-light-90;
+        border-radius: 5px;
+        font-size: 1rem;
+
+        &:focus,
+        &:hover {
+            outline: none;
+            border-color: blue;
+            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+form > button[type="submit"] {
+    padding: 1em 3em;
+    margin: 2em;
+    background-color: $clr-green;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $clr-light-90;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        background-color: #596d48e2;    
+    }
 }

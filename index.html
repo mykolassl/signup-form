@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Poppins:wght@600&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css">
+        <script src="main.js" defer></script>
         <title>Sign Up</title>
     </head>
     <body>
@@ -16,11 +17,43 @@
                 <img src="./images/logo.png" alt="logo" class="logo">
             </div>
             <div class="credits-container">
-                <p>Photo by <a href="https://unsplash.com/@stephenleo1982">Stephen Leonardi</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+                <p>Photo by <a href="https://unsplash.com/@stephenleo1982" target="_blank">Stephen Leonardi</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
             </div>
         </div>
         <div class="landing-right">
-            <div>aaa</div>
+            <form>
+                <div class="container">
+                    <h2>Let's do this!</h2>
+                    <div class="wrapper">
+                        <div class="input-container">
+                            <label for="first-name">First name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Jonas" minlength="3" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="last-name">Last name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Biliunas" minlength="3" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="pasztas@gmail.com" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="phone-number">Phone number</label>
+                            <input id="phone-number" name="phone-number" placeholder="+370..." required>
+                        </div>
+                        <div class="input-container">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="confirm-password">Confirm password</label>
+                            <input type="password" id="confirm-password" name="password" required>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+            <p>Already have an account? <a href="https://en.wikipedia.org/wiki/Trollface" target="_blank">Log in</a></p>
         </div>
     </body>
 </html>
