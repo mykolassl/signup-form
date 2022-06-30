@@ -103,6 +103,7 @@ body {
 }
 
 .input-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -122,11 +123,25 @@ body {
   border: 1px solid hsl(0deg, 0%, 90%);
   border-radius: 5px;
   font-size: 1rem;
+  outline: none;
 }
 .input-container input:focus, .input-container input:hover {
-  outline: none;
   border-color: blue;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.input-container input:valid {
+  border-color: #75ca2b;
+}
+.input-container .error {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 50%;
+  color: red;
+  background-color: white;
+  transition: opacity, top 0.2s 0s ease-in-out;
 }
 
 form > button[type=submit] {
