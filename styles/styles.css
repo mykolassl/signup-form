@@ -28,7 +28,6 @@ body {
   align-items: center;
   flex: 1 1 0;
   padding-block: 2em;
-  background-color: red;
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;

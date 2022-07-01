@@ -1,5 +1,6 @@
 const passwordField = document.querySelector('#password');
 const confirmPasswordField = document.querySelector('#confirm-password');
+const submitBtn = document.querySelector('button[type="submit"]');
 
 function handlePasswordCheck(e) {
     if(passwordField.value === confirmPasswordField.value) {
@@ -22,3 +23,9 @@ function handlePasswordCheck(e) {
 
 passwordField.addEventListener('keyup', handlePasswordCheck);
 confirmPasswordField.addEventListener('keyup', handlePasswordCheck);
+
+// Check if both passwords are the same on form submit
+
+submitBtn.addEventListener('click', (e) => {
+    if(passwordField.value !== confirmPasswordField.value) return e.preventDefault();
+});
